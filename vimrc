@@ -13,8 +13,8 @@ syntax on
 " Vim UI
 "--------
 " color scheme
-set background=dark
-color solarized
+" set background=dark
+colorscheme vividchalk
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
