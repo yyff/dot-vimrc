@@ -1,8 +1,12 @@
 source ~/.vim/bundles.vim
 
+set fencs=utf-8,gbk
 " encoding dectection
+set fileencoding=gb2312
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
+set termencoding=gbk
+set encoding=utf-8
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
