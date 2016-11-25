@@ -36,6 +36,7 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/sjl/gundo.vim.git'
 "Bundle 'git://github.com/godlygeek/tabular.git'
 Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+Bundle 'git://github.com/terryma/vim-multiple-cursors'
 
 "--------------
 " IDE features
