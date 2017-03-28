@@ -3,8 +3,8 @@ source ~/.vim/bundles.vim
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
-" set termencoding=gbk
-set encoding=utf-8
+"set termencoding=gbk
+set encoding=gbk
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
@@ -46,7 +46,7 @@ set showcmd                                                       " show typed c
 set title                                                         " show file in titlebar
 set laststatus=2                                                  " use 2 lines for the status bar
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
-set matchpairs+=<:>                                               " specially for html
+"set matchpairs+=<:>                                               " specially for html
 " set relativenumber
 
 " Default Indentation
@@ -79,7 +79,7 @@ let g:html_indent_style1 = "inc"
 " Plugin settings
 "-----------------
 
-let delimitMate_matchpairs = "(:),[:],{:}"
+"let delimitMate_matchpairs = "(:),[:],{:}"
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -100,7 +100,7 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 let g:rbpt_max = 16
-autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
+"autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
 " tabbar
 let g:Tb_MaxSize = 2
@@ -207,16 +207,19 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 "let g:SuperTabRetainCompletionType=2
 
 " ctrlp
-"set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-"let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
+
+nmap <F1> :Dox<cr>
+imap <F1> <Esc>:Dox<cr>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
-"nmap <F4> :IndentGuidesToggle<cr>
+nmap <F4> :IndentGuidesToggle<cr>
 nmap  <D-/> :
 "nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
@@ -281,3 +284,5 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
+
+hi MatchParen cterm=bold ctermbg=white ctermfg=magenta
