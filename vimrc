@@ -1,22 +1,28 @@
 source ~/.vim/bundles.vim
 
 " encoding dectection
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+"set fileencodings=gbk,utf-8,gb2312,gb18030,ucs-bom,cp936,latin1
+set fileencodings=utf-8,gbk,gb2312,gb18030,ucs-bom,cp936,latin1
 
-"set termencoding=gbk
-set encoding=gbk
+"set termencoding=utf-8
+"set termencoding=gbk,utf-8
+
+"set encoding=gbk
+set encoding=utf-8
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
 " enable syntax hightlight and completion
+"syntax enable
 syntax on
 
 "--------
 " Vim UI
 "--------
-" color scheme
-" set background=dark
-colorscheme monokai
+"" color scheme
+set background=dark
+"colorscheme monokai
+colorscheme vividchalk
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -62,8 +68,8 @@ set expandtab       " expand tab to space
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
-autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
+autocmd FileType coffee,javascript setlocal tabstop=4 shiftwidth=4 softtabstop=2 textwidth=120
+autocmd FileType python,sh setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 
@@ -100,7 +106,7 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 let g:rbpt_max = 16
-"autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
+autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
 " tabbar
 let g:Tb_MaxSize = 2
@@ -115,14 +121,14 @@ hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 "let g:EasyMotion_leader_key = '<Leader>'
 
 " minibufexpl
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplMapWindowNavArrows = 1
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
-"let g:miniBufExplMoreThanOne=0
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplMoreThanOne=0
 "
-"map <F11> :MBEbp<CR>
-"map <F12> :MBEbn<CR>
+map <F11> :MBEbp<CR>
+map <F12> :MBEbn<CR>
 
 " Tagbar
 let g:tagbar_left=1
@@ -160,8 +166,8 @@ let NERDChristmasTree=0
 let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-" let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
-"let NERDTreeShowBookmarks=1
+"let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "right"
 
 " nerdcommenter
@@ -202,7 +208,7 @@ endif
 let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 
 " SuperTab
-" let g:SuperTabDefultCompletionType='context'
+"let g:SuperTabDefultCompletionType='context'
 "let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 "let g:SuperTabRetainCompletionType=2
 
@@ -211,17 +217,16 @@ set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_S
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
-
 nmap <F1> :Dox<cr>
 imap <F1> <Esc>:Dox<cr>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-nmap <F5> :TagbarToggle<cr>
-nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
+nmap <F5> :TagbarToggle<cr>
+nmap <F6> :NERDTreeToggle<cr>
 nmap  <D-/> :
-"nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
 "------------------
@@ -285,4 +290,4 @@ if has("gui_running")
     map <D-0> :tablast<CR>
 endif
 
-hi MatchParen cterm=bold ctermbg=white ctermfg=magenta
+"hi MatchParen cterm=bold ctermbg=white ctermfg=magenta
