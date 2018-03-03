@@ -16,6 +16,8 @@ filetype plugin indent on
 "syntax enable
 syntax on
 
+set clipboard=unnamedplus
+
 "--------
 " Vim UI
 "--------
@@ -23,6 +25,10 @@ syntax on
 set background=dark
 "colorscheme monokai
 colorscheme vividchalk
+"let base16colorspace=256  " Access colors present in 256 colorspace"
+"set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+"set background=dark
+"colorscheme delek
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -59,7 +65,7 @@ set matchtime=2                                                   " show matchin
 set autoindent
 set smartindent     " indent when
 set tabstop=4       " tab width
-set softtabstop=4   " backspace
+"set softtabstop=4   " backspace
 set shiftwidth=4    " indent width
 " set textwidth=79
 " set smarttab
@@ -226,7 +232,7 @@ nmap <F4> :IndentGuidesToggle<cr>
 nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap  <D-/> :
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack!<Space>
 nnoremap <leader>v V`]
 
 "------------------
@@ -291,3 +297,17 @@ if has("gui_running")
 endif
 
 "hi MatchParen cterm=bold ctermbg=white ctermfg=magenta
+
+
+" copy from vim to mac clipboard
+" map "+y :w !pbcopy<CR><CR>
+" map "+p :r !pbpaste<CR><CR>
+
+" " ctrl-x for cut
+" vmap <C-x> :!pbcopy<cr>
+" " ctrl-c for copy
+" vmap <C-c> :w !pbcopy<cr><cr>
+" " ctrl-v for paste
+" "nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+" imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+

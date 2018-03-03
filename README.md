@@ -219,11 +219,13 @@ Clone in Mac
 
         mv ~/.vim ~/.vim.orig
         mv ~/.vimrc ~/.vimrc.orig
+        mv ~/.tmux.conf ~/.tmux.conf.orig
 
 2. Clone and install this repo:
 
-        git clone git://github.com/yyff/dot-vimrc.git ~/.vim
+        git clone https://github.com/yyff/dot-vimrc.git ~/.vim
         ln -s ~/.vim/vimrc ~/.vimrc
+        ln -s ~/.vim/tmux.conf ~/.tmux.conf
 
 3. Setup `Vundle`:
 
