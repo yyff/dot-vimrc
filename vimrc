@@ -23,6 +23,7 @@ set clipboard=unnamedplus
 "--------
 "" color scheme
 set background=dark
+"colorscheme solarized
 "colorscheme monokai
 colorscheme vividchalk
 "let base16colorspace=256  " Access colors present in 256 colorspace"
@@ -221,6 +222,11 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
+" vim-authorinfo
+let g:authorinfo_author='Yang Fan'
+let g:authorinfo_email='yangfan036@gmail.com'
+let g:authorinfo_company=''
 
 " Keybindings for plugin toggle
 nmap <F1> :Dox<cr>

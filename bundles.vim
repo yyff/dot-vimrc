@@ -21,6 +21,7 @@ Bundle 'git://github.com/Raimondi/delimitMate.git'
 "------ snipmate dependencies -------
 "Bundle 'git://github.com/MarcWeber/vim-addon-mw-utils.git'
 "Bundle 'git://github.com/tomtom/tlib_vim.git'
+Bundle 'git://github.com/ButBueatiful/vim-authorinfo.git'
 
 "-----------------
 " Fast navigation
@@ -36,12 +37,14 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/sjl/gundo.vim.git'
 "Bundle 'git://github.com/godlygeek/tabular.git'
 Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
-Bundle 'git://github.com/terryma/vim-multiple-cursors'
+Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
+Bundle 'git://github.com/vim-scripts/DoxygenToolkit.vim.git'
 
 "--------------
 " IDE features
 "--------------
 Bundle 'git://github.com/scrooloose/nerdtree.git'
+Bundle 'git://github.com/fholgado/minibufexpl.vim.git'
 "Bundle 'git://github.com/humiaozuzu/TabBar.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
