@@ -317,3 +317,4 @@ endif
 " "nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 " imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
+xnoremap p pgvy
