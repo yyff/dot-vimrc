@@ -16,8 +16,6 @@ filetype plugin indent on
 "syntax enable
 syntax on
 
-set clipboard=unnamedplus
-
 "--------
 " Vim UI
 "--------
@@ -92,7 +90,6 @@ let g:html_indent_style1 = "inc"
 " Plugin settings
 "-----------------
 
-"let delimitMate_matchpairs = "(:),[:],{:}"
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -225,8 +222,8 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " vim-authorinfo
 let g:authorinfo_author='Yang Fan'
-let g:authorinfo_email='yangfan036@gmail.com'
-let g:authorinfo_company=''
+let g:authorinfo_email='yangfan.yfan@bytedance.com'
+let g:authorinfo_company='bytedance'
 
 " Keybindings for plugin toggle
 nmap <F1> :Dox<cr>
@@ -280,6 +277,9 @@ nnoremap ; :
 :command Qa qa
 :command QA qa
 
+" other key bindings
+xnoremap p pgvy
+
 " for macvim
 if has("gui_running")
     set go=aAce  " remove toolbar
@@ -317,4 +317,3 @@ endif
 " "nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 " imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
-xnoremap p pgvy

@@ -36,7 +36,7 @@ Bundle 'git://github.com/ButBueatiful/vim-authorinfo.git'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/sjl/gundo.vim.git'
 "Bundle 'git://github.com/godlygeek/tabular.git'
-Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+"Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
 Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
 Bundle 'git://github.com/vim-scripts/DoxygenToolkit.vim.git'
 
@@ -87,7 +87,7 @@ Bundle 'git://github.com/nvie/vim-togglemouse.git'
 " Bundle 'git://github.com/tpope/vim-endwise.git'
 
 "------- Go ----------
-"Bundle 'git://github.com/fatih/vim-go.git'
+Bundle 'git://github.com/fatih/vim-go.git'
 
 "------- FPs ------
 Bundle 'git://github.com/kien/rainbow_parentheses.vim.git'
